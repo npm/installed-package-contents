@@ -1,0 +1,31 @@
+{
+  "name": "@npmcli/installed-package-contents",
+  "version": "0.0.0",
+  "description": "Get the list of files installed in a package in node_modules, including bundled dependencies",
+  "author": "Isaac Z. Schlueter <i@izs.me> (https://izs.me)",
+  "main": "index.js",
+  "bin": "index.js",
+  "license": "ISC",
+  "scripts": {
+    "test": "tap",
+    "snap": "tap",
+    "preversion": "npm test",
+    "postversion": "npm publish",
+    "postpublish": "git push origin --follow-tags"
+  },
+  "tap": {
+    "check-coverage": true
+  },
+  "devDependencies": {
+    "tap": "^14.10.2"
+  },
+  "dependencies": {
+    "@types/react": "^16.9.15",
+    "npm-bundled": "^1.1.0",
+    "react": "^16.12.0",
+    "read-package-json-fast": "^1.1.0",
+    "readdir-scoped-modules": "^1.1.0",
+    "tap-parser": "^9.3.3"
+  },
+  "repository": "git+https://github.com/npm/installed-package-contents"
+}
