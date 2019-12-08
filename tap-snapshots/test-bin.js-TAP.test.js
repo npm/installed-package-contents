@@ -109,7 +109,7 @@ Object {
   "code": 0,
   "signal": null,
   "stderr": "",
-  "stdout": "node_modules/empty\\n",
+  "stdout": "",
 }
 `
 
@@ -127,7 +127,7 @@ Object {
   "code": 0,
   "signal": null,
   "stderr": "",
-  "stdout": "node_modules/no-deps/index.js\\nnode_modules/no-deps/package.json\\n",
+  "stdout": "node_modules/no-deps/empty\\nnode_modules/no-deps/index.js\\nnode_modules/no-deps/package.json\\n",
 }
 `
 
@@ -172,7 +172,7 @@ Object {
   "code": 0,
   "signal": null,
   "stderr": "",
-  "stdout": "node_modules/empty\\n",
+  "stdout": "",
 }
 `
 
@@ -190,7 +190,7 @@ Object {
   "code": 0,
   "signal": null,
   "stderr": "",
-  "stdout": "node_modules/no-deps/index.js\\nnode_modules/no-deps/package.json\\n",
+  "stdout": "node_modules/no-deps/empty\\nnode_modules/no-deps/index.js\\nnode_modules/no-deps/package.json\\n",
 }
 `
 
@@ -235,7 +235,7 @@ Object {
   "code": 0,
   "signal": null,
   "stderr": "",
-  "stdout": "node_modules/empty\\n",
+  "stdout": "",
 }
 `
 
@@ -253,7 +253,7 @@ Object {
   "code": 0,
   "signal": null,
   "stderr": "",
-  "stdout": "node_modules/no-deps/index.js\\nnode_modules/no-deps/package.json\\n",
+  "stdout": "node_modules/no-deps/empty\\nnode_modules/no-deps/index.js\\nnode_modules/no-deps/package.json\\n",
 }
 `
 
@@ -307,7 +307,7 @@ Object {
   "code": 0,
   "signal": null,
   "stderr": "",
-  "stdout": "node_modules/empty\\n",
+  "stdout": "",
 }
 `
 
@@ -325,7 +325,7 @@ Object {
   "code": 0,
   "signal": null,
   "stderr": "",
-  "stdout": "node_modules/no-deps/index.js\\nnode_modules/no-deps/package.json\\n",
+  "stdout": "node_modules/no-deps/empty\\nnode_modules/no-deps/index.js\\nnode_modules/no-deps/package.json\\n",
 }
 `
 

@@ -7,9 +7,11 @@ t.cleanSnapshot = s => s.split(__dirname).join('{dir}')
 
 const mkdirp = require('mkdirp').sync
 const fixtures = resolve(__dirname, 'fixtures/node_modules')
-// mkdirp this because we don't want to leave a .git-keep file in it
+// mkdirp these because we don't want to leave a .git-keep file in it,
+// since the whole point is that the dirs are empty.
 // no need to clean up, git will ignore it.
 mkdirp(resolve(fixtures, 'empty'))
+mkdirp(resolve(fixtures, 'no-deps/empty'))
 
 const paths = [
   'bundle-all',

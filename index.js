@@ -121,7 +121,7 @@ const pkgContents = async ({
     return result
 
   // empty folder, just add the folder itself to the result
-  if (!dirEntries.length && !bundleDeps) {
+  if (!dirEntries.length && !bundleDeps && currentDepth !== 0) {
     result.add(path)
     return result
   }

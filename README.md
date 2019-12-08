@@ -79,6 +79,10 @@ matching the criteria.  This includes all bundled dependencies in
 `node_modules`, and any linked executables in `node_modules/.bin` that the
 package caused to be installed.
 
+An empty or missing package folder will return an empty array.  Empty
+directories _within_ package contents are listed, even if the `depth`
+argument would cause them to be traversed into.
+
 ## CAVEAT
 
 If using this module to generate a list of files that should be recursively

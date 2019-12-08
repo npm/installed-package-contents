@@ -37,9 +37,7 @@ Array [
 `
 
 exports[`test/basic.js TAP default depth empty > expect resolving Promise 1`] = `
-Array [
-  "{dir}/fixtures/node_modules/empty",
-]
+Array []
 `
 
 exports[`test/basic.js TAP default depth missing > expect resolving Promise 1`] = `
@@ -48,6 +46,7 @@ Array []
 
 exports[`test/basic.js TAP default depth no-deps > expect resolving Promise 1`] = `
 Array [
+  "{dir}/fixtures/node_modules/no-deps/empty",
   "{dir}/fixtures/node_modules/no-deps/index.js",
   "{dir}/fixtures/node_modules/no-deps/package.json",
 ]
@@ -142,9 +141,7 @@ Array [
 `
 
 exports[`test/basic.js TAP depth:1 empty > expect resolving Promise 1`] = `
-Array [
-  "{dir}/fixtures/node_modules/empty",
-]
+Array []
 `
 
 exports[`test/basic.js TAP depth:1 missing > expect resolving Promise 1`] = `
@@ -153,6 +150,7 @@ Array []
 
 exports[`test/basic.js TAP depth:1 no-deps > expect resolving Promise 1`] = `
 Array [
+  "{dir}/fixtures/node_modules/no-deps/empty",
   "{dir}/fixtures/node_modules/no-deps/index.js",
   "{dir}/fixtures/node_modules/no-deps/package.json",
 ]
@@ -204,9 +202,7 @@ Array [
 `
 
 exports[`test/basic.js TAP depth:2 empty > expect resolving Promise 1`] = `
-Array [
-  "{dir}/fixtures/node_modules/empty",
-]
+Array []
 `
 
 exports[`test/basic.js TAP depth:2 missing > expect resolving Promise 1`] = `
@@ -215,6 +211,7 @@ Array []
 
 exports[`test/basic.js TAP depth:2 no-deps > expect resolving Promise 1`] = `
 Array [
+  "{dir}/fixtures/node_modules/no-deps/empty",
   "{dir}/fixtures/node_modules/no-deps/index.js",
   "{dir}/fixtures/node_modules/no-deps/package.json",
 ]
@@ -267,9 +264,7 @@ Array [
 `
 
 exports[`test/basic.js TAP depth:Infinity empty > expect resolving Promise 1`] = `
-Array [
-  "{dir}/fixtures/node_modules/empty",
-]
+Array []
 `
 
 exports[`test/basic.js TAP depth:Infinity missing > expect resolving Promise 1`] = `
@@ -278,6 +273,7 @@ Array []
 
 exports[`test/basic.js TAP depth:Infinity no-deps > expect resolving Promise 1`] = `
 Array [
+  "{dir}/fixtures/node_modules/no-deps/empty",
   "{dir}/fixtures/node_modules/no-deps/index.js",
   "{dir}/fixtures/node_modules/no-deps/package.json",
 ]
