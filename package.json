@@ -27,5 +27,6 @@
     "readdir-scoped-modules": "^1.1.0",
     "tap-parser": "^9.3.3"
   },
-  "repository": "git+https://github.com/npm/installed-package-contents"
+  "repository": "git+https://github.com/npm/installed-package-contents",
+  "files": ["index.js"]
 }
