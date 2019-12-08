@@ -2,6 +2,7 @@ const getContents = require('../')
 const t = require('tap')
 
 const {resolve} = require('path')
+t.formatSnapshot = a => Array.isArray(a) ? a.sort() : a
 t.cleanSnapshot = s => s.split(__dirname).join('{dir}')
 
 const mkdirp = require('mkdirp').sync

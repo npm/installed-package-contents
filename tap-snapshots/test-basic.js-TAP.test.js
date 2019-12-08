@@ -8,14 +8,14 @@
 exports[`test/basic.js TAP default depth bundle-all > expect resolving Promise 1`] = `
 Array [
   "{dir}/fixtures/node_modules/.bin/all",
-  "{dir}/fixtures/node_modules/bundle-all/package.json",
-  "{dir}/fixtures/node_modules/bundle-all/node_modules/@scope/baz",
-  "{dir}/fixtures/node_modules/bundle-all/node_modules/.bin/foo",
-  "{dir}/fixtures/node_modules/bundle-all/node_modules/foo",
   "{dir}/fixtures/node_modules/bundle-all/node_modules/.bin/bar",
-  "{dir}/fixtures/node_modules/bundle-all/node_modules/bar",
+  "{dir}/fixtures/node_modules/bundle-all/node_modules/.bin/foo",
   "{dir}/fixtures/node_modules/bundle-all/node_modules/.bin/quux",
+  "{dir}/fixtures/node_modules/bundle-all/node_modules/@scope/baz",
   "{dir}/fixtures/node_modules/bundle-all/node_modules/@scope/quux",
+  "{dir}/fixtures/node_modules/bundle-all/node_modules/bar",
+  "{dir}/fixtures/node_modules/bundle-all/node_modules/foo",
+  "{dir}/fixtures/node_modules/bundle-all/package.json",
 ]
 `
 
@@ -29,10 +29,10 @@ Array [
 exports[`test/basic.js TAP default depth bundle-some > expect resolving Promise 1`] = `
 Array [
   "{dir}/fixtures/node_modules/.bin/some",
-  "{dir}/fixtures/node_modules/bundle-some/package.json",
-  "{dir}/fixtures/node_modules/bundle-some/node_modules/@scope/baz",
   "{dir}/fixtures/node_modules/bundle-some/node_modules/.bin/foo",
+  "{dir}/fixtures/node_modules/bundle-some/node_modules/@scope/baz",
   "{dir}/fixtures/node_modules/bundle-some/node_modules/foo",
+  "{dir}/fixtures/node_modules/bundle-some/package.json",
 ]
 `
 
@@ -55,13 +55,13 @@ Array [
 
 exports[`test/basic.js TAP default depth optional-only > expect resolving Promise 1`] = `
 Array [
-  "{dir}/fixtures/node_modules/optional-only/package.json",
+  "{dir}/fixtures/node_modules/optional-only/node_modules/.bin/bar",
+  "{dir}/fixtures/node_modules/optional-only/node_modules/.bin/foo",
   "{dir}/fixtures/node_modules/optional-only/node_modules/@scope/baz",
   "{dir}/fixtures/node_modules/optional-only/node_modules/@scope/quux",
-  "{dir}/fixtures/node_modules/optional-only/node_modules/.bin/foo",
-  "{dir}/fixtures/node_modules/optional-only/node_modules/foo",
-  "{dir}/fixtures/node_modules/optional-only/node_modules/.bin/bar",
   "{dir}/fixtures/node_modules/optional-only/node_modules/bar",
+  "{dir}/fixtures/node_modules/optional-only/node_modules/foo",
+  "{dir}/fixtures/node_modules/optional-only/package.json",
 ]
 `
 
@@ -113,14 +113,14 @@ Array [
 exports[`test/basic.js TAP depth:1 bundle-all > expect resolving Promise 1`] = `
 Array [
   "{dir}/fixtures/node_modules/.bin/all",
-  "{dir}/fixtures/node_modules/bundle-all/package.json",
-  "{dir}/fixtures/node_modules/bundle-all/node_modules/@scope/baz",
-  "{dir}/fixtures/node_modules/bundle-all/node_modules/.bin/foo",
-  "{dir}/fixtures/node_modules/bundle-all/node_modules/foo",
   "{dir}/fixtures/node_modules/bundle-all/node_modules/.bin/bar",
-  "{dir}/fixtures/node_modules/bundle-all/node_modules/bar",
+  "{dir}/fixtures/node_modules/bundle-all/node_modules/.bin/foo",
   "{dir}/fixtures/node_modules/bundle-all/node_modules/.bin/quux",
+  "{dir}/fixtures/node_modules/bundle-all/node_modules/@scope/baz",
   "{dir}/fixtures/node_modules/bundle-all/node_modules/@scope/quux",
+  "{dir}/fixtures/node_modules/bundle-all/node_modules/bar",
+  "{dir}/fixtures/node_modules/bundle-all/node_modules/foo",
+  "{dir}/fixtures/node_modules/bundle-all/package.json",
 ]
 `
 
@@ -134,10 +134,10 @@ Array [
 exports[`test/basic.js TAP depth:1 bundle-some > expect resolving Promise 1`] = `
 Array [
   "{dir}/fixtures/node_modules/.bin/some",
-  "{dir}/fixtures/node_modules/bundle-some/package.json",
-  "{dir}/fixtures/node_modules/bundle-some/node_modules/@scope/baz",
   "{dir}/fixtures/node_modules/bundle-some/node_modules/.bin/foo",
+  "{dir}/fixtures/node_modules/bundle-some/node_modules/@scope/baz",
   "{dir}/fixtures/node_modules/bundle-some/node_modules/foo",
+  "{dir}/fixtures/node_modules/bundle-some/package.json",
 ]
 `
 
@@ -160,28 +160,28 @@ Array [
 
 exports[`test/basic.js TAP depth:1 optional-only > expect resolving Promise 1`] = `
 Array [
-  "{dir}/fixtures/node_modules/optional-only/package.json",
+  "{dir}/fixtures/node_modules/optional-only/node_modules/.bin/bar",
+  "{dir}/fixtures/node_modules/optional-only/node_modules/.bin/foo",
   "{dir}/fixtures/node_modules/optional-only/node_modules/@scope/baz",
   "{dir}/fixtures/node_modules/optional-only/node_modules/@scope/quux",
-  "{dir}/fixtures/node_modules/optional-only/node_modules/.bin/foo",
-  "{dir}/fixtures/node_modules/optional-only/node_modules/foo",
-  "{dir}/fixtures/node_modules/optional-only/node_modules/.bin/bar",
   "{dir}/fixtures/node_modules/optional-only/node_modules/bar",
+  "{dir}/fixtures/node_modules/optional-only/node_modules/foo",
+  "{dir}/fixtures/node_modules/optional-only/package.json",
 ]
 `
 
 exports[`test/basic.js TAP depth:2 bundle-all > expect resolving Promise 1`] = `
 Array [
   "{dir}/fixtures/node_modules/.bin/all",
-  "{dir}/fixtures/node_modules/bundle-all/package.json",
-  "{dir}/fixtures/node_modules/bundle-all/node_modules/.bin/foo",
   "{dir}/fixtures/node_modules/bundle-all/node_modules/.bin/bar",
-  "{dir}/fixtures/node_modules/bundle-all/node_modules/@scope/baz/package.json",
+  "{dir}/fixtures/node_modules/bundle-all/node_modules/.bin/foo",
   "{dir}/fixtures/node_modules/bundle-all/node_modules/.bin/quux",
+  "{dir}/fixtures/node_modules/bundle-all/node_modules/@scope/baz/package.json",
+  "{dir}/fixtures/node_modules/bundle-all/node_modules/@scope/quux/package.json",
+  "{dir}/fixtures/node_modules/bundle-all/node_modules/bar/package.json",
   "{dir}/fixtures/node_modules/bundle-all/node_modules/foo/package.json",
   "{dir}/fixtures/node_modules/bundle-all/node_modules/foo/xyz",
-  "{dir}/fixtures/node_modules/bundle-all/node_modules/bar/package.json",
-  "{dir}/fixtures/node_modules/bundle-all/node_modules/@scope/quux/package.json",
+  "{dir}/fixtures/node_modules/bundle-all/package.json",
 ]
 `
 
@@ -195,11 +195,11 @@ Array [
 exports[`test/basic.js TAP depth:2 bundle-some > expect resolving Promise 1`] = `
 Array [
   "{dir}/fixtures/node_modules/.bin/some",
-  "{dir}/fixtures/node_modules/bundle-some/package.json",
   "{dir}/fixtures/node_modules/bundle-some/node_modules/.bin/foo",
   "{dir}/fixtures/node_modules/bundle-some/node_modules/@scope/baz/package.json",
   "{dir}/fixtures/node_modules/bundle-some/node_modules/foo/package.json",
   "{dir}/fixtures/node_modules/bundle-some/node_modules/foo/xyz",
+  "{dir}/fixtures/node_modules/bundle-some/package.json",
 ]
 `
 
@@ -222,29 +222,29 @@ Array [
 
 exports[`test/basic.js TAP depth:2 optional-only > expect resolving Promise 1`] = `
 Array [
-  "{dir}/fixtures/node_modules/optional-only/package.json",
-  "{dir}/fixtures/node_modules/optional-only/node_modules/.bin/foo",
   "{dir}/fixtures/node_modules/optional-only/node_modules/.bin/bar",
+  "{dir}/fixtures/node_modules/optional-only/node_modules/.bin/foo",
   "{dir}/fixtures/node_modules/optional-only/node_modules/@scope/baz/package.json",
   "{dir}/fixtures/node_modules/optional-only/node_modules/@scope/quux/package.json",
+  "{dir}/fixtures/node_modules/optional-only/node_modules/bar/package.json",
   "{dir}/fixtures/node_modules/optional-only/node_modules/foo/package.json",
   "{dir}/fixtures/node_modules/optional-only/node_modules/foo/xyz",
-  "{dir}/fixtures/node_modules/optional-only/node_modules/bar/package.json",
+  "{dir}/fixtures/node_modules/optional-only/package.json",
 ]
 `
 
 exports[`test/basic.js TAP depth:Infinity bundle-all > expect resolving Promise 1`] = `
 Array [
   "{dir}/fixtures/node_modules/.bin/all",
-  "{dir}/fixtures/node_modules/bundle-all/package.json",
-  "{dir}/fixtures/node_modules/bundle-all/node_modules/.bin/foo",
   "{dir}/fixtures/node_modules/bundle-all/node_modules/.bin/bar",
-  "{dir}/fixtures/node_modules/bundle-all/node_modules/@scope/baz/package.json",
+  "{dir}/fixtures/node_modules/bundle-all/node_modules/.bin/foo",
   "{dir}/fixtures/node_modules/bundle-all/node_modules/.bin/quux",
-  "{dir}/fixtures/node_modules/bundle-all/node_modules/foo/package.json",
-  "{dir}/fixtures/node_modules/bundle-all/node_modules/bar/package.json",
+  "{dir}/fixtures/node_modules/bundle-all/node_modules/@scope/baz/package.json",
   "{dir}/fixtures/node_modules/bundle-all/node_modules/@scope/quux/package.json",
+  "{dir}/fixtures/node_modules/bundle-all/node_modules/bar/package.json",
+  "{dir}/fixtures/node_modules/bundle-all/node_modules/foo/package.json",
   "{dir}/fixtures/node_modules/bundle-all/node_modules/foo/xyz/abc",
+  "{dir}/fixtures/node_modules/bundle-all/package.json",
 ]
 `
 
@@ -258,11 +258,11 @@ Array [
 exports[`test/basic.js TAP depth:Infinity bundle-some > expect resolving Promise 1`] = `
 Array [
   "{dir}/fixtures/node_modules/.bin/some",
-  "{dir}/fixtures/node_modules/bundle-some/package.json",
   "{dir}/fixtures/node_modules/bundle-some/node_modules/.bin/foo",
   "{dir}/fixtures/node_modules/bundle-some/node_modules/@scope/baz/package.json",
   "{dir}/fixtures/node_modules/bundle-some/node_modules/foo/package.json",
   "{dir}/fixtures/node_modules/bundle-some/node_modules/foo/xyz/abc",
+  "{dir}/fixtures/node_modules/bundle-some/package.json",
 ]
 `
 
@@ -285,13 +285,13 @@ Array [
 
 exports[`test/basic.js TAP depth:Infinity optional-only > expect resolving Promise 1`] = `
 Array [
-  "{dir}/fixtures/node_modules/optional-only/package.json",
-  "{dir}/fixtures/node_modules/optional-only/node_modules/.bin/foo",
   "{dir}/fixtures/node_modules/optional-only/node_modules/.bin/bar",
+  "{dir}/fixtures/node_modules/optional-only/node_modules/.bin/foo",
   "{dir}/fixtures/node_modules/optional-only/node_modules/@scope/baz/package.json",
   "{dir}/fixtures/node_modules/optional-only/node_modules/@scope/quux/package.json",
-  "{dir}/fixtures/node_modules/optional-only/node_modules/foo/package.json",
   "{dir}/fixtures/node_modules/optional-only/node_modules/bar/package.json",
+  "{dir}/fixtures/node_modules/optional-only/node_modules/foo/package.json",
   "{dir}/fixtures/node_modules/optional-only/node_modules/foo/xyz/abc",
+  "{dir}/fixtures/node_modules/optional-only/package.json",
 ]
 `
