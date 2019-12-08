@@ -48,7 +48,18 @@ node_modules/bundle-some/node_modules/foo
 
 CLI options:
 
-* 
+```
+Usage:
+  installed-package-contents <path> [-d<n> --depth=<n>]
+
+Lists the files installed for a package specified by <path>.
+
+Options:
+  -d<n> --depth=<n>   Provide a numeric value ("Infinity" is allowed)
+                      to specify how deep in the file tree to traverse.
+                      Default=1
+  -h --help           Show this usage information
+```
 
 ## OPTIONS
 
