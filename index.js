@@ -96,10 +96,15 @@ const pkgContents = async ({
       const scope = basename(dir)
       const nm = /^@.+/.test(scope) ? dirname(dir) : dir
 
-      const bins = await Promise.all(Object.keys(pkg.bin).map(b => {
+      const binFiles = []
+      Object.keys(pkg.bin).forEach(b => {
         const base = resolve(nm, '.bin', b)
-        return [base, base + '.cmd', base + '.ps1']
-      }).flat().map(b => stat(b).then(() => b).catch((er) => null)))
+        binFiles.push(base, base + '.cmd', base + '.ps1')
+      })
+
+      const bins = await Promise.all(
+        binFiles.map(b => stat(b).then(() => b).catch((er) => null))
+      )
       bins.filter(b => b).forEach(b => result.add(b))
     }
   }
