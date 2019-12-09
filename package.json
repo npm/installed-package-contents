@@ -27,5 +27,8 @@
   "repository": "git+https://github.com/npm/installed-package-contents",
   "files": [
     "index.js"
-  ]
+  ],
+  "engines": {
+    "node": ">= 10"
+  }
 }
