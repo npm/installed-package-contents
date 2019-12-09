@@ -21,6 +21,7 @@
   },
   "dependencies": {
     "npm-bundled": "^1.1.0",
+    "npm-normalize-package-bin": "^1.0.1",
     "read-package-json-fast": "^1.1.0",
     "readdir-scoped-modules": "^1.1.0"
   },

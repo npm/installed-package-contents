@@ -23,11 +23,12 @@ const readFile = promisify(fs.readFile)
 const readdir = promisify(fs.readdir)
 const stat = promisify(fs.stat)
 const {relative, resolve, basename, dirname} = require('path')
+const normalizePackageBin = require('npm-normalize-package-bin')
 
 const readPackage = ({ path, packageJsonCache }) =>
   packageJsonCache.has(path) ? Promise.resolve(packageJsonCache.get(path))
   : readFile(path).then(json => {
-      const pkg = JSON.parse(json)
+      const pkg = normalizePackageBin(JSON.parse(json))
       packageJsonCache.set(path, pkg)
       return pkg
     })
