@@ -1,0 +1,40 @@
+name: Node CI
+
+on: [push]
+
+jobs:
+  build:
+    strategy:
+      fail-fast: false
+      matrix:
+        node-version: [10.x, 12.x]
+        os: [macOS-latest, ubuntu-latest, windows-latest]
+
+    runs-on: ${{ matrix.os }}
+
+    steps:
+      # Checkout the npm/cli repo
+      - uses: actions/checkout@v1.1.0
+        # Installs the specific version of Node.js
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+
+        # Run the installer script
+      - name: Install dependencies (win)
+        if: matrix.os == 'windows-latest'
+        run: |
+          npm --version
+          npm config set legacy=true
+          npm ci
+
+      - name: Install dependencies
+        if: matrix.os != 'windows-latest'
+        run: |
+          npm --version
+          npm install
+
+        # Run the tests
+      - name: Run Tap tests
+        run: npm test
