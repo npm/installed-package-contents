@@ -3,9 +3,13 @@ const t = require('tap')
 
 const {resolve} = require('path')
 t.formatSnapshot = a => Array.isArray(a) ? a.sort() : a
-t.cleanSnapshot = s => s.toLowerCase()
+// the \ in the paths in the strings in tcompare's output are escaped
+// so we have to swap out 2 \ chars with 1, then turn into / for snapshot
+// Also, drive letters are case-insensitive, and will randomly be uppercase
+// sometimes and lowercase others, so we normalize that as well.
+t.cleanSnapshot = s => s.toLowerCase().replace(/\\\\/g, '\\')
   .split(__dirname.toLowerCase()).join('{dir}')
-  .replace(/\\/g, '/')
+  .replace(/\\+/g, '/')
 
 const mkdirp = require('mkdirp').sync
 const fixtures = resolve(__dirname, 'fixtures/node_modules')
