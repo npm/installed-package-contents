@@ -55,9 +55,6 @@ const rpj = ({ path, packageJsonCache }) =>
     if (typeof bd === 'object' && !Array.isArray(bd)) {
       pkg.bundleDependencies = Object.keys(bd)
     }
-    if (typeof pkg.bin === 'string') {
-      pkg.bin = { [basename(pkg.name)]: pkg.bin }
-    }
     pkg[normalized] = true
     return pkg
   })

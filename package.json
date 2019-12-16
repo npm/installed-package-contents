@@ -20,9 +20,9 @@
     "tap": "^14.10.4"
   },
   "dependencies": {
-    "npm-bundled": "^1.1.0",
+    "npm-bundled": "^1.1.1",
     "npm-normalize-package-bin": "^1.0.1",
-    "read-package-json-fast": "^1.1.0",
+    "read-package-json-fast": "^1.1.1",
     "readdir-scoped-modules": "^1.1.0"
   },
   "repository": "git+https://github.com/npm/installed-package-contents",
