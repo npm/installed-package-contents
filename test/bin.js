@@ -1,6 +1,14 @@
 const {spawn} = require('child_process')
 const {resolve} = require('path')
 const t = require('tap')
+// the \ in the paths in the strings in tcompare's output are escaped
+// so we have to swap out 2 \ chars with 1, then turn into / for snapshot
+// Also, drive letters are case-insensitive, and will randomly be uppercase
+// sometimes and lowercase others, so we normalize that as well.
+t.cleanSnapshot = s => s.toLowerCase().replace(/\\\\/g, '\\')
+  .split(__dirname.toLowerCase()).join('{dir}')
+  .replace(/\\+/g, '/')
+
 const fixtures = resolve(__dirname, 'fixtures')
 const bin = require.resolve('../')
 const run = args => new Promise((res, rej) => {
