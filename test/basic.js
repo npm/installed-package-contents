@@ -70,3 +70,30 @@ t.test('depth:Infinity', t => {
       depth: Infinity,
     }))))
 })
+
+t.test('cache race condition coverage tests', t => {
+  t.plan(2)
+  const path = resolve(fixtures, 'bundle-all')
+
+  const normalizePackageBin = require('npm-normalize-package-bin')
+  const {promisify} = require('util')
+
+  t.test('full package json cache', t => {
+    // cache always claims to have the content, so we always get it from there
+    const cache = {}
+    const packageJsonCache = {
+      has: () => true,
+      get: async path => promisify(fs.readFile)(path, 'utf8').then(data =>
+        cache[data] || (cache[data] = normalizePackageBin(JSON.parse(data))))
+    }
+    return t.resolveMatchSnapshot(getContents({path, packageJsonCache}))
+  })
+
+  t.test('empty package json cache', t => {
+    const packageJsonCache = {
+      has: () => false,
+      set: () => {},
+    }
+    return t.resolveMatchSnapshot(getContents({path, packageJsonCache}))
+  })
+})

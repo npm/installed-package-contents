@@ -5,6 +5,34 @@
  * Make sure to inspect the output below.  Do not ignore changes!
  */
 'use strict'
+exports[`test/basic.js TAP cache race condition coverage tests empty package json cache > expect resolving Promise 1`] = `
+array [
+  "{dir}/fixtures/node_modules/.bin/all",
+  "{dir}/fixtures/node_modules/bundle-all/node_modules/.bin/bar",
+  "{dir}/fixtures/node_modules/bundle-all/node_modules/.bin/foo",
+  "{dir}/fixtures/node_modules/bundle-all/node_modules/.bin/quux",
+  "{dir}/fixtures/node_modules/bundle-all/node_modules/@scope/baz",
+  "{dir}/fixtures/node_modules/bundle-all/node_modules/@scope/quux",
+  "{dir}/fixtures/node_modules/bundle-all/node_modules/bar",
+  "{dir}/fixtures/node_modules/bundle-all/node_modules/foo",
+  "{dir}/fixtures/node_modules/bundle-all/package.json",
+]
+`
+
+exports[`test/basic.js TAP cache race condition coverage tests full package json cache > expect resolving Promise 1`] = `
+array [
+  "{dir}/fixtures/node_modules/.bin/all",
+  "{dir}/fixtures/node_modules/bundle-all/node_modules/.bin/bar",
+  "{dir}/fixtures/node_modules/bundle-all/node_modules/.bin/foo",
+  "{dir}/fixtures/node_modules/bundle-all/node_modules/.bin/quux",
+  "{dir}/fixtures/node_modules/bundle-all/node_modules/@scope/baz",
+  "{dir}/fixtures/node_modules/bundle-all/node_modules/@scope/quux",
+  "{dir}/fixtures/node_modules/bundle-all/node_modules/bar",
+  "{dir}/fixtures/node_modules/bundle-all/node_modules/foo",
+  "{dir}/fixtures/node_modules/bundle-all/package.json",
+]
+`
+
 exports[`test/basic.js TAP default depth bundle-all > expect resolving Promise 1`] = `
 array [
   "{dir}/fixtures/node_modules/.bin/all",
