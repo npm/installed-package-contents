@@ -3,7 +3,9 @@ const t = require('tap')
 
 const {resolve} = require('path')
 t.formatSnapshot = a => Array.isArray(a) ? a.sort() : a
-t.cleanSnapshot = s => s.split(__dirname).join('{dir}')
+t.cleanSnapshot = s => s.toLowerCase()
+  .split(__dirname.toLowerCase()).join('{dir}')
+  .replace(/\\/g, '/')
 
 const mkdirp = require('mkdirp').sync
 const fixtures = resolve(__dirname, 'fixtures/node_modules')

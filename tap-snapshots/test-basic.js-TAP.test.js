@@ -6,7 +6,7 @@
  */
 'use strict'
 exports[`test/basic.js TAP default depth bundle-all > expect resolving Promise 1`] = `
-Array [
+array [
   "{dir}/fixtures/node_modules/.bin/all",
   "{dir}/fixtures/node_modules/bundle-all/node_modules/.bin/bar",
   "{dir}/fixtures/node_modules/bundle-all/node_modules/.bin/foo",
@@ -20,14 +20,14 @@ Array [
 `
 
 exports[`test/basic.js TAP default depth bundle-none > expect resolving Promise 1`] = `
-Array [
+array [
   "{dir}/fixtures/node_modules/.bin/bundle-none",
   "{dir}/fixtures/node_modules/bundle-none/package.json",
 ]
 `
 
 exports[`test/basic.js TAP default depth bundle-some > expect resolving Promise 1`] = `
-Array [
+array [
   "{dir}/fixtures/node_modules/.bin/some",
   "{dir}/fixtures/node_modules/bundle-some/node_modules/.bin/foo",
   "{dir}/fixtures/node_modules/bundle-some/node_modules/@scope/baz",
@@ -37,15 +37,15 @@ Array [
 `
 
 exports[`test/basic.js TAP default depth empty > expect resolving Promise 1`] = `
-Array []
+array []
 `
 
 exports[`test/basic.js TAP default depth missing > expect resolving Promise 1`] = `
-Array []
+array []
 `
 
 exports[`test/basic.js TAP default depth no-deps > expect resolving Promise 1`] = `
-Array [
+array [
   "{dir}/fixtures/node_modules/no-deps/empty",
   "{dir}/fixtures/node_modules/no-deps/index.js",
   "{dir}/fixtures/node_modules/no-deps/package.json",
@@ -53,7 +53,7 @@ Array [
 `
 
 exports[`test/basic.js TAP default depth optional-only > expect resolving Promise 1`] = `
-Array [
+array [
   "{dir}/fixtures/node_modules/optional-only/node_modules/.bin/bar",
   "{dir}/fixtures/node_modules/optional-only/node_modules/.bin/foo",
   "{dir}/fixtures/node_modules/optional-only/node_modules/@scope/baz",
@@ -65,52 +65,52 @@ Array [
 `
 
 exports[`test/basic.js TAP depth:0 bundle-all > expect resolving Promise 1`] = `
-Array [
+array [
   "{dir}/fixtures/node_modules/.bin/all",
   "{dir}/fixtures/node_modules/bundle-all",
 ]
 `
 
 exports[`test/basic.js TAP depth:0 bundle-none > expect resolving Promise 1`] = `
-Array [
+array [
   "{dir}/fixtures/node_modules/.bin/bundle-none",
   "{dir}/fixtures/node_modules/bundle-none",
 ]
 `
 
 exports[`test/basic.js TAP depth:0 bundle-some > expect resolving Promise 1`] = `
-Array [
+array [
   "{dir}/fixtures/node_modules/.bin/some",
   "{dir}/fixtures/node_modules/bundle-some",
 ]
 `
 
 exports[`test/basic.js TAP depth:0 empty > expect resolving Promise 1`] = `
-Array [
+array [
   "{dir}/fixtures/node_modules/empty",
 ]
 `
 
 exports[`test/basic.js TAP depth:0 missing > expect resolving Promise 1`] = `
-Array [
+array [
   "{dir}/fixtures/node_modules/missing",
 ]
 `
 
 exports[`test/basic.js TAP depth:0 no-deps > expect resolving Promise 1`] = `
-Array [
+array [
   "{dir}/fixtures/node_modules/no-deps",
 ]
 `
 
 exports[`test/basic.js TAP depth:0 optional-only > expect resolving Promise 1`] = `
-Array [
+array [
   "{dir}/fixtures/node_modules/optional-only",
 ]
 `
 
 exports[`test/basic.js TAP depth:1 bundle-all > expect resolving Promise 1`] = `
-Array [
+array [
   "{dir}/fixtures/node_modules/.bin/all",
   "{dir}/fixtures/node_modules/bundle-all/node_modules/.bin/bar",
   "{dir}/fixtures/node_modules/bundle-all/node_modules/.bin/foo",
@@ -124,14 +124,14 @@ Array [
 `
 
 exports[`test/basic.js TAP depth:1 bundle-none > expect resolving Promise 1`] = `
-Array [
+array [
   "{dir}/fixtures/node_modules/.bin/bundle-none",
   "{dir}/fixtures/node_modules/bundle-none/package.json",
 ]
 `
 
 exports[`test/basic.js TAP depth:1 bundle-some > expect resolving Promise 1`] = `
-Array [
+array [
   "{dir}/fixtures/node_modules/.bin/some",
   "{dir}/fixtures/node_modules/bundle-some/node_modules/.bin/foo",
   "{dir}/fixtures/node_modules/bundle-some/node_modules/@scope/baz",
@@ -141,15 +141,15 @@ Array [
 `
 
 exports[`test/basic.js TAP depth:1 empty > expect resolving Promise 1`] = `
-Array []
+array []
 `
 
 exports[`test/basic.js TAP depth:1 missing > expect resolving Promise 1`] = `
-Array []
+array []
 `
 
 exports[`test/basic.js TAP depth:1 no-deps > expect resolving Promise 1`] = `
-Array [
+array [
   "{dir}/fixtures/node_modules/no-deps/empty",
   "{dir}/fixtures/node_modules/no-deps/index.js",
   "{dir}/fixtures/node_modules/no-deps/package.json",
@@ -157,7 +157,7 @@ Array [
 `
 
 exports[`test/basic.js TAP depth:1 optional-only > expect resolving Promise 1`] = `
-Array [
+array [
   "{dir}/fixtures/node_modules/optional-only/node_modules/.bin/bar",
   "{dir}/fixtures/node_modules/optional-only/node_modules/.bin/foo",
   "{dir}/fixtures/node_modules/optional-only/node_modules/@scope/baz",
@@ -169,7 +169,7 @@ Array [
 `
 
 exports[`test/basic.js TAP depth:2 bundle-all > expect resolving Promise 1`] = `
-Array [
+array [
   "{dir}/fixtures/node_modules/.bin/all",
   "{dir}/fixtures/node_modules/bundle-all/node_modules/.bin/bar",
   "{dir}/fixtures/node_modules/bundle-all/node_modules/.bin/foo",
@@ -184,14 +184,14 @@ Array [
 `
 
 exports[`test/basic.js TAP depth:2 bundle-none > expect resolving Promise 1`] = `
-Array [
+array [
   "{dir}/fixtures/node_modules/.bin/bundle-none",
   "{dir}/fixtures/node_modules/bundle-none/package.json",
 ]
 `
 
 exports[`test/basic.js TAP depth:2 bundle-some > expect resolving Promise 1`] = `
-Array [
+array [
   "{dir}/fixtures/node_modules/.bin/some",
   "{dir}/fixtures/node_modules/bundle-some/node_modules/.bin/foo",
   "{dir}/fixtures/node_modules/bundle-some/node_modules/@scope/baz/package.json",
@@ -202,15 +202,15 @@ Array [
 `
 
 exports[`test/basic.js TAP depth:2 empty > expect resolving Promise 1`] = `
-Array []
+array []
 `
 
 exports[`test/basic.js TAP depth:2 missing > expect resolving Promise 1`] = `
-Array []
+array []
 `
 
 exports[`test/basic.js TAP depth:2 no-deps > expect resolving Promise 1`] = `
-Array [
+array [
   "{dir}/fixtures/node_modules/no-deps/empty",
   "{dir}/fixtures/node_modules/no-deps/index.js",
   "{dir}/fixtures/node_modules/no-deps/package.json",
@@ -218,7 +218,7 @@ Array [
 `
 
 exports[`test/basic.js TAP depth:2 optional-only > expect resolving Promise 1`] = `
-Array [
+array [
   "{dir}/fixtures/node_modules/optional-only/node_modules/.bin/bar",
   "{dir}/fixtures/node_modules/optional-only/node_modules/.bin/foo",
   "{dir}/fixtures/node_modules/optional-only/node_modules/@scope/baz/package.json",
@@ -231,7 +231,7 @@ Array [
 `
 
 exports[`test/basic.js TAP depth:Infinity bundle-all > expect resolving Promise 1`] = `
-Array [
+array [
   "{dir}/fixtures/node_modules/.bin/all",
   "{dir}/fixtures/node_modules/bundle-all/node_modules/.bin/bar",
   "{dir}/fixtures/node_modules/bundle-all/node_modules/.bin/foo",
@@ -246,14 +246,14 @@ Array [
 `
 
 exports[`test/basic.js TAP depth:Infinity bundle-none > expect resolving Promise 1`] = `
-Array [
+array [
   "{dir}/fixtures/node_modules/.bin/bundle-none",
   "{dir}/fixtures/node_modules/bundle-none/package.json",
 ]
 `
 
 exports[`test/basic.js TAP depth:Infinity bundle-some > expect resolving Promise 1`] = `
-Array [
+array [
   "{dir}/fixtures/node_modules/.bin/some",
   "{dir}/fixtures/node_modules/bundle-some/node_modules/.bin/foo",
   "{dir}/fixtures/node_modules/bundle-some/node_modules/@scope/baz/package.json",
@@ -264,15 +264,15 @@ Array [
 `
 
 exports[`test/basic.js TAP depth:Infinity empty > expect resolving Promise 1`] = `
-Array []
+array []
 `
 
 exports[`test/basic.js TAP depth:Infinity missing > expect resolving Promise 1`] = `
-Array []
+array []
 `
 
 exports[`test/basic.js TAP depth:Infinity no-deps > expect resolving Promise 1`] = `
-Array [
+array [
   "{dir}/fixtures/node_modules/no-deps/empty",
   "{dir}/fixtures/node_modules/no-deps/index.js",
   "{dir}/fixtures/node_modules/no-deps/package.json",
@@ -280,7 +280,7 @@ Array [
 `
 
 exports[`test/basic.js TAP depth:Infinity optional-only > expect resolving Promise 1`] = `
-Array [
+array [
   "{dir}/fixtures/node_modules/optional-only/node_modules/.bin/bar",
   "{dir}/fixtures/node_modules/optional-only/node_modules/.bin/foo",
   "{dir}/fixtures/node_modules/optional-only/node_modules/@scope/baz/package.json",
