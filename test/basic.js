@@ -75,6 +75,7 @@ t.test('cache race condition coverage tests', t => {
   t.plan(2)
   const path = resolve(fixtures, 'bundle-all')
 
+  const fs = require('fs')
   const normalizePackageBin = require('npm-normalize-package-bin')
   const {promisify} = require('util')
 
@@ -83,8 +84,10 @@ t.test('cache race condition coverage tests', t => {
     const cache = {}
     const packageJsonCache = {
       has: () => true,
-      get: async path => promisify(fs.readFile)(path, 'utf8').then(data =>
-        cache[data] || (cache[data] = normalizePackageBin(JSON.parse(data))))
+      get: path => {
+        const data = fs.readFileSync(path, 'utf8')
+        return cache[data] || (cache[data] = normalizePackageBin(JSON.parse(data)))
+      }
     }
     return t.resolveMatchSnapshot(getContents({path, packageJsonCache}))
   })

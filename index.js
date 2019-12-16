@@ -177,10 +177,11 @@ const pkgContents = async ({
   return result
 }
 
-module.exports = ({path, depth = 1}) => pkgContents({
+module.exports = ({path, depth = 1, packageJsonCache}) => pkgContents({
   path: resolve(path),
   depth,
   pkg: true,
+  packageJsonCache,
 }).then(results => [...results])
 
 
