@@ -32,6 +32,12 @@ const mkdirp = require('mkdirp').sync
 // no need to clean up, git will ignore it.
 mkdirp(resolve(fixtures, 'node_modules/empty'))
 
+// mkdirp these because we don't want to leave a .git-keep file in it,
+// since the whole point is that the dirs are empty.
+// no need to clean up, git will ignore it.
+mkdirp(resolve(fixtures, 'empty'))
+mkdirp(resolve(fixtures, 'no-deps/empty'))
+
 const paths = [
   'node_modules/bundle-all',
   'node_modules/bundle-some',
