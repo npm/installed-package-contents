@@ -1,40 +1,29 @@
-name: Node CI
+name: CI
 
-on: [push]
+on: [push, pull_request]
 
 jobs:
   build:
     strategy:
-      fail-fast: false
       matrix:
-        node-version: [10.x, 12.x]
-        os: [macOS-latest, ubuntu-latest, windows-latest]
+        node-version: [10.0.x, 10.x, 12.0.x, 12.x, 14.0.x, 14.x, 15.x]
+        os: [ubuntu-latest, macOS-latest, windows-latest]
+      fail-fast: false
 
     runs-on: ${{ matrix.os }}
 
     steps:
-      # Checkout the npm/cli repo
-      - uses: actions/checkout@v1.1.0
-        # Installs the specific version of Node.js
-      - name: Use Node.js ${{ matrix.node-version }}
+      - name: Checkout Repository
+        uses: actions/checkout@v1.1.0
+
+      - name: Use Nodejs ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
 
-        # Run the installer script
-      - name: Install dependencies (win)
-        if: matrix.os == 'windows-latest'
-        run: |
-          npm --version
-          npm config set legacy=true
-          npm ci
-
       - name: Install dependencies
-        if: matrix.os != 'windows-latest'
-        run: |
-          npm --version
-          npm install
+        run: npm install
 
-        # Run the tests
-      - name: Run Tap tests
+      # Run for all environments
+      - name: Run Tap Tests
         run: npm test

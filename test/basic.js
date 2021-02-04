@@ -1,4 +1,26 @@
-const getContents = require('../')
+const requireInject = require('require-inject')
+const {promisify} = require('util')
+const fs = require('fs')
+
+const realReaddir = fs.readdir
+let readdirFileTypes = true
+const readdir = (path, ...args) => {
+  if (readdirFileTypes)
+    return realReaddir(path, ...args)
+  else
+    return realReaddir(path, args.pop())
+}
+
+const fsMock = {
+  ...fs,
+  promises: fs.promises ? {
+    ...fs.promises,
+    readdir: promisify(readdir),
+  } : null,
+  readdir,
+}
+
+const getContents = requireInject('../', { fs: fsMock })
 const t = require('tap')
 
 const {resolve} = require('path')
@@ -9,7 +31,9 @@ t.formatSnapshot = a => Array.isArray(a) ? a.sort() : a
 // sometimes and lowercase others, so we normalize that as well.
 t.cleanSnapshot = s => s.toLowerCase().replace(/\\\\/g, '\\')
   .split(__dirname.toLowerCase()).join('{dir}')
+  .replace(/[\n\r]+/, '\0')
   .replace(/\\+/g, '/')
+  .replace('\0', '\n')
 
 const mkdirp = require('mkdirp').sync
 const fixtures = resolve(__dirname, 'fixtures/node_modules')
@@ -29,47 +53,53 @@ const paths = [
   'optional-only',
 ]
 
-t.test('default depth', t => {
-  t.plan(paths.length)
-  paths.forEach(p => t.test(p, t =>
-    t.resolveMatchSnapshot(getContents({ path: resolve(fixtures, p) }))))
-})
+for (const fileTypesSupport of [true, false]) {
+  t.test(`fileTypesSupport=${fileTypesSupport}`, async t => {
+    readdirFileTypes = fileTypesSupport
 
-t.test('depth:0', t => {
-  t.plan(paths.length)
-  paths.forEach(p => t.test(p, t =>
-    t.resolveMatchSnapshot(getContents({
-      path: resolve(fixtures, p),
-      depth: 0,
-    }))))
-})
+    t.test('default depth', t => {
+      t.plan(paths.length)
+      paths.forEach(p => t.test(p, t =>
+        t.resolveMatchSnapshot(getContents({ path: resolve(fixtures, p) }))))
+    })
 
-t.test('depth:1', t => {
-  t.plan(paths.length)
-  paths.forEach(p => t.test(p, t =>
-    t.resolveMatchSnapshot(getContents({
-      path: resolve(fixtures, p),
-      depth: 1,
-    }))))
-})
+    t.test('depth:0', t => {
+      t.plan(paths.length)
+      paths.forEach(p => t.test(p, t =>
+        t.resolveMatchSnapshot(getContents({
+          path: resolve(fixtures, p),
+          depth: 0,
+        }))))
+    })
 
-t.test('depth:2', t => {
-  t.plan(paths.length)
-  paths.forEach(p => t.test(p, t =>
-    t.resolveMatchSnapshot(getContents({
-      path: resolve(fixtures, p),
-      depth: 2,
-    }))))
-})
+    t.test('depth:1', t => {
+      t.plan(paths.length)
+      paths.forEach(p => t.test(p, t =>
+        t.resolveMatchSnapshot(getContents({
+          path: resolve(fixtures, p),
+          depth: 1,
+        }))))
+    })
 
-t.test('depth:Infinity', t => {
-  t.plan(paths.length)
-  paths.forEach(p => t.test(p, t =>
-    t.resolveMatchSnapshot(getContents({
-      path: resolve(fixtures, p),
-      depth: Infinity,
-    }))))
-})
+    t.test('depth:2', t => {
+      t.plan(paths.length)
+      paths.forEach(p => t.test(p, t =>
+        t.resolveMatchSnapshot(getContents({
+          path: resolve(fixtures, p),
+          depth: 2,
+        }))))
+    })
+
+    t.test('depth:Infinity', t => {
+      t.plan(paths.length)
+      paths.forEach(p => t.test(p, t =>
+        t.resolveMatchSnapshot(getContents({
+          path: resolve(fixtures, p),
+          depth: Infinity,
+        }))))
+    })
+  })
+}
 
 t.test('cache race condition coverage tests', t => {
   t.plan(2)

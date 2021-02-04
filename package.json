@@ -16,9 +16,11 @@
     "postpublish": "git push origin --follow-tags"
   },
   "tap": {
-    "check-coverage": true
+    "check-coverage": true,
+    "color": true
   },
   "devDependencies": {
+    "require-inject": "^1.4.4",
     "tap": "^14.11.0"
   },
   "dependencies": {
