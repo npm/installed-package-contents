@@ -17,7 +17,7 @@
     "check-coverage": true
   },
   "devDependencies": {
-    "tap": "^14.10.4"
+    "tap": "^14.11.0"
   },
   "dependencies": {
     "npm-bundled": "^1.1.1",
