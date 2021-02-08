@@ -25,9 +25,7 @@
   },
   "dependencies": {
     "npm-bundled": "^1.1.1",
-    "npm-normalize-package-bin": "^1.0.1",
-    "read-package-json-fast": "^2.0.1",
-    "readdir-scoped-modules": "^1.1.0"
+    "npm-normalize-package-bin": "^1.0.1"
   },
   "repository": "git+https://github.com/npm/installed-package-contents",
   "files": [
