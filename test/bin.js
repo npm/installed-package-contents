@@ -1,5 +1,5 @@
-const {spawn} = require('child_process')
-const {resolve} = require('path')
+const { spawn } = require('child_process')
+const { resolve } = require('path')
 const t = require('tap')
 // the \ in the paths in the strings in tcompare's output are escaped
 // so we have to swap out 2 \ chars with 1, then turn into / for snapshot
@@ -42,7 +42,6 @@ const paths = [
   'node_modules/no-deps',
   'node_modules/optional-only',
 ]
-
 
 const cases = [
   ['-h'],

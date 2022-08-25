@@ -1,14 +1,15 @@
 const requireInject = require('require-inject')
-const {promisify} = require('util')
+const { promisify } = require('util')
 const fs = require('fs')
 
 const realReaddir = fs.readdir
 let readdirFileTypes = true
 const readdir = (path, ...args) => {
-  if (readdirFileTypes)
+  if (readdirFileTypes) {
     return realReaddir(path, ...args)
-  else
+  } else {
     return realReaddir(path, args.pop())
+  }
 }
 
 const fsMock = {
@@ -23,7 +24,7 @@ const fsMock = {
 const getContents = requireInject('../', { fs: fsMock })
 const t = require('tap')
 
-const {resolve} = require('path')
+const { resolve } = require('path')
 t.formatSnapshot = a => Array.isArray(a) ? a.sort() : a
 // the \ in the paths in the strings in tcompare's output are escaped
 // so we have to swap out 2 \ chars with 1, then turn into / for snapshot
@@ -105,21 +106,19 @@ t.test('cache race condition coverage tests', t => {
   t.plan(2)
   const path = resolve(fixtures, 'bundle-all')
 
-  const fs = require('fs')
   const normalizePackageBin = require('npm-normalize-package-bin')
-  const {promisify} = require('util')
 
   t.test('full package json cache', t => {
     // cache always claims to have the content, so we always get it from there
     const cache = {}
     const packageJsonCache = {
       has: () => true,
-      get: path => {
-        const data = fs.readFileSync(path, 'utf8')
+      get: p => {
+        const data = fs.readFileSync(p, 'utf8')
         return cache[data] || (cache[data] = normalizePackageBin(JSON.parse(data)))
-      }
+      },
     }
-    return t.resolveMatchSnapshot(getContents({path, packageJsonCache}))
+    return t.resolveMatchSnapshot(getContents({ path, packageJsonCache }))
   })
 
   t.test('empty package json cache', t => {
@@ -127,6 +126,6 @@ t.test('cache race condition coverage tests', t => {
       has: () => false,
       set: () => {},
     }
-    return t.resolveMatchSnapshot(getContents({path, packageJsonCache}))
+    return t.resolveMatchSnapshot(getContents({ path, packageJsonCache }))
   })
 })
