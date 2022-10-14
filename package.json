@@ -18,7 +18,7 @@
     "posttest": "npm run lint"
   },
   "devDependencies": {
-    "@npmcli/eslint-config": "^3.1.0",
+    "@npmcli/eslint-config": "^4.0.0",
     "@npmcli/template-oss": "4.5.1",
     "mkdirp": "^1.0.4",
     "require-inject": "^1.4.4",
