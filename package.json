@@ -5,7 +5,7 @@
   "author": "GitHub Inc.",
   "main": "lib/index.js",
   "bin": {
-    "installed-package-contents": "index.js"
+    "installed-package-contents": "lib/index.js"
   },
   "license": "ISC",
   "scripts": {
