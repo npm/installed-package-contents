@@ -1,5 +1,11 @@
 # Changelog
 
+## [2.0.1](https://github.com/npm/installed-package-contents/compare/v2.0.0...v2.0.1) (2022-10-19)
+
+### Bug Fixes
+
+* [`48e60e0`](https://github.com/npm/installed-package-contents/commit/48e60e0c69702daef7efbdcb6ff5a28a965722f8) [#26](https://github.com/npm/installed-package-contents/pull/26) bin entry (#26) (@raineorshine)
+
 ## [2.0.0](https://github.com/npm/installed-package-contents/compare/v1.0.7...v2.0.0) (2022-10-14)
 
 ### ⚠️ BREAKING CHANGES
