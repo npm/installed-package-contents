@@ -1,6 +1,7 @@
 const { spawn } = require('child_process')
 const { resolve } = require('path')
 const t = require('tap')
+const fs = require('fs')
 // the \ in the paths in the strings in tcompare's output are escaped
 // so we have to swap out 2 \ chars with 1, then turn into / for snapshot
 // Also, drive letters are case-insensitive, and will randomly be uppercase
@@ -27,7 +28,7 @@ const run = args => new Promise((res, rej) => {
   })
 })
 
-const mkdirp = require('mkdirp').sync
+const mkdirp = (p) => fs.mkdirSync(p, { recursive: true })
 // mkdirp this because we don't want to leave a .git-keep file in it
 // no need to clean up, git will ignore it.
 mkdirp(resolve(fixtures, 'node_modules/empty'))
