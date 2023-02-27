@@ -36,7 +36,7 @@ t.cleanSnapshot = s => s.toLowerCase().replace(/\\\\/g, '\\')
   .replace(/\\+/g, '/')
   .replace('\0', '\n')
 
-const mkdirp = require('mkdirp').sync
+const mkdirp = (p) => fs.mkdirSync(p, { recursive: true })
 const fixtures = resolve(__dirname, 'fixtures/node_modules')
 // mkdirp these because we don't want to leave a .git-keep file in it,
 // since the whole point is that the dirs are empty.
