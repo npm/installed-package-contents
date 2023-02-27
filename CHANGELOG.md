@@ -1,5 +1,11 @@
 # Changelog
 
+## [2.0.2](https://github.com/npm/installed-package-contents/compare/v2.0.1...v2.0.2) (2023-02-27)
+
+### Bug Fixes
+
+* [`4a51e49`](https://github.com/npm/installed-package-contents/commit/4a51e49e462055422492f693e20d4e07b0fdcb5b) add shell line so bin works (#37) (@ShamimIslam)
+
 ## [2.0.1](https://github.com/npm/installed-package-contents/compare/v2.0.0...v2.0.1) (2022-10-19)
 
 ### Bug Fixes
