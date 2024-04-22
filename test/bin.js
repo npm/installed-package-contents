@@ -14,7 +14,7 @@ t.cleanSnapshot = s => s.toLowerCase().replace(/\\\\/g, '\\')
 const fixtures = resolve(__dirname, 'fixtures')
 const bin = require.resolve('../bin/index.js')
 
-const run = args => new Promise((res, rej) => {
+const run = args => new Promise((res) => {
   const child = spawn(process.execPath, [bin, ...args], { cwd: fixtures })
   const stdout = []
   const stderr = []
