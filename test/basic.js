@@ -1,24 +1,8 @@
 const t = require('tap')
-const requireInject = require('require-inject')
 const { readFileSync, mkdirSync } = require('fs')
-const { readdir: realReaddir, ...fsp } = require('fs/promises')
-
-let readdirFileTypes = true
-
-const getContents = requireInject('../', {
-  'fs/promises': {
-    ...fsp,
-    readdir: (path, ...args) => {
-      if (readdirFileTypes) {
-        return realReaddir(path, ...args)
-      } else {
-        return realReaddir(path, args.pop())
-      }
-    },
-  },
-})
-
 const { resolve } = require('path')
+const getContents = require('../')
+
 t.formatSnapshot = a => Array.isArray(a) ? a.sort() : a
 // the \ in the paths in the strings in tcompare's output are escaped
 // so we have to swap out 2 \ chars with 1, then turn into / for snapshot
@@ -47,10 +31,10 @@ const paths = [
   'optional-only',
 ]
 
-for (const fileTypesSupport of [true, false]) {
+// Only one path here now that fileTypesSupport is not polyfilled.
+// Keeping this for now to reduce snapshot churn. TODO: remove later
+for (const fileTypesSupport of [true]) {
   t.test(`fileTypesSupport=${fileTypesSupport}`, async t => {
-    readdirFileTypes = fileTypesSupport
-
     t.test('default depth', t => {
       t.plan(paths.length)
       paths.forEach(p => t.test(p, t =>
