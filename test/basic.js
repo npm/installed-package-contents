@@ -1,28 +1,22 @@
-const requireInject = require('require-inject')
-const { promisify } = require('util')
-const fs = require('fs')
-
-const realReaddir = fs.readdir
-let readdirFileTypes = true
-const readdir = (path, ...args) => {
-  if (readdirFileTypes) {
-    return realReaddir(path, ...args)
-  } else {
-    return realReaddir(path, args.pop())
-  }
-}
-
-const fsMock = {
-  ...fs,
-  promises: fs.promises ? {
-    ...fs.promises,
-    readdir: promisify(readdir),
-  } : null,
-  readdir,
-}
-
-const getContents = requireInject('../', { fs: fsMock })
 const t = require('tap')
+const requireInject = require('require-inject')
+const { readFileSync, mkdirSync } = require('fs')
+const { readdir: realReaddir, ...fsp } = require('fs/promises')
+
+let readdirFileTypes = true
+
+const getContents = requireInject('../', {
+  'fs/promises': {
+    ...fsp,
+    readdir: (path, ...args) => {
+      if (readdirFileTypes) {
+        return realReaddir(path, ...args)
+      } else {
+        return realReaddir(path, args.pop())
+      }
+    },
+  },
+})
 
 const { resolve } = require('path')
 t.formatSnapshot = a => Array.isArray(a) ? a.sort() : a
@@ -36,13 +30,12 @@ t.cleanSnapshot = s => s.toLowerCase().replace(/\\\\/g, '\\')
   .replace(/\\+/g, '/')
   .replace('\0', '\n')
 
-const mkdirp = (p) => fs.mkdirSync(p, { recursive: true })
 const fixtures = resolve(__dirname, 'fixtures/node_modules')
 // mkdirp these because we don't want to leave a .git-keep file in it,
 // since the whole point is that the dirs are empty.
 // no need to clean up, git will ignore it.
-mkdirp(resolve(fixtures, 'empty'))
-mkdirp(resolve(fixtures, 'no-deps/empty'))
+mkdirSync(resolve(fixtures, 'empty'), { recursive: true })
+mkdirSync(resolve(fixtures, 'no-deps/empty'), { recursive: true })
 
 const paths = [
   'bundle-all',
@@ -114,7 +107,7 @@ t.test('cache race condition coverage tests', t => {
     const packageJsonCache = {
       has: () => true,
       get: p => {
-        const data = fs.readFileSync(p, 'utf8')
+        const data = readFileSync(p, 'utf8')
         return cache[data] || (cache[data] = normalizePackageBin(JSON.parse(data)))
       },
     }

@@ -1,7 +1,8 @@
 const { spawn } = require('child_process')
 const { resolve } = require('path')
 const t = require('tap')
-const fs = require('fs')
+const { mkdirSync } = require('fs')
+
 // the \ in the paths in the strings in tcompare's output are escaped
 // so we have to swap out 2 \ chars with 1, then turn into / for snapshot
 // Also, drive letters are case-insensitive, and will randomly be uppercase
@@ -11,7 +12,8 @@ t.cleanSnapshot = s => s.toLowerCase().replace(/\\\\/g, '\\')
   .replace(/\\+/g, '/')
 
 const fixtures = resolve(__dirname, 'fixtures')
-const bin = require.resolve('../')
+const bin = require.resolve('../bin/index.js')
+
 const run = args => new Promise((res, rej) => {
   const child = spawn(process.execPath, [bin, ...args], { cwd: fixtures })
   const stdout = []
@@ -28,11 +30,10 @@ const run = args => new Promise((res, rej) => {
   })
 })
 
-const mkdirp = (p) => fs.mkdirSync(p, { recursive: true })
 // mkdirp this because we don't want to leave a .git-keep file in it
 // no need to clean up, git will ignore it.
-mkdirp(resolve(fixtures, 'node_modules/empty'))
-mkdirp(resolve(fixtures, 'node_modules/no-deps/empty'))
+mkdirSync(resolve(fixtures, 'node_modules/empty'), { recursive: true })
+mkdirSync(resolve(fixtures, 'node_modules/no-deps/empty'), { recursive: true })
 
 const paths = [
   'node_modules/bundle-all',
