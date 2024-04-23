@@ -1,5 +1,22 @@
 # Changelog
 
+## [2.1.0](https://github.com/npm/installed-package-contents/compare/v2.0.2...v2.1.0) (2024-04-23)
+
+### Features
+
+* [`a7f49ef`](https://github.com/npm/installed-package-contents/commit/a7f49ef75f92eb521bd1e05bd73a3f7b9403314b) [#72](https://github.com/npm/installed-package-contents/pull/72) remove fs.promises and separate bin script (@lukekarrys)
+
+### Bug Fixes
+
+* [`4327480`](https://github.com/npm/installed-package-contents/commit/43274801eafbcc5cff003865015508c3f9a2fa06) [#72](https://github.com/npm/installed-package-contents/pull/72) linting (@lukekarrys)
+
+### Chores
+
+* [`3813829`](https://github.com/npm/installed-package-contents/commit/3813829f1636fa1ee7e0cd43615d760434541112) [#73](https://github.com/npm/installed-package-contents/pull/73) auto publish (#73) (@lukekarrys)
+* [`a9cf35e`](https://github.com/npm/installed-package-contents/commit/a9cf35eb306220659833c6048a763617b57d9609) [#72](https://github.com/npm/installed-package-contents/pull/72) remove fileTypesSupport test (@lukekarrys)
+* [`e9bc949`](https://github.com/npm/installed-package-contents/commit/e9bc949f68c7524019f43155e3379199a7cd48f3) [#71](https://github.com/npm/installed-package-contents/pull/71) postinstall for dependabot template-oss PR (@lukekarrys)
+* [`c5b6bfb`](https://github.com/npm/installed-package-contents/commit/c5b6bfb958ab0a97c871146fe7d4f4a9713b8222) [#71](https://github.com/npm/installed-package-contents/pull/71) bump @npmcli/template-oss from 4.21.3 to 4.21.4 (@dependabot[bot])
+
 ## [2.0.2](https://github.com/npm/installed-package-contents/compare/v2.0.1...v2.0.2) (2023-02-27)
 
 ### Bug Fixes
