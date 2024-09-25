@@ -24,7 +24,7 @@
     "tap": "^16.3.0"
   },
   "dependencies": {
-    "npm-bundled": "^3.0.0",
+    "npm-bundled": "^4.0.0",
     "npm-normalize-package-bin": "^3.0.0"
   },
   "repository": {
