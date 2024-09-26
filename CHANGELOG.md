@@ -1,5 +1,20 @@
 # Changelog
 
+## [3.0.0](https://github.com/npm/installed-package-contents/compare/v2.1.0...v3.0.0) (2024-09-25)
+### ⚠️ BREAKING CHANGES
+* `@npmcli/installed-package-contents` now supports node `^18.17.0 || >=20.5.0`
+### Bug Fixes
+* [`ea967c6`](https://github.com/npm/installed-package-contents/commit/ea967c6634cde5efa39827d135714c8dae3843aa) [#89](https://github.com/npm/installed-package-contents/pull/89) align to npm 10 node engine range (@reggi)
+### Dependencies
+* [`08fef39`](https://github.com/npm/installed-package-contents/commit/08fef397e6586bef50ae43285678450106e61ae1) [#89](https://github.com/npm/installed-package-contents/pull/89) `npm-normalize-package-bin@4.0.0`
+* [`8ebdc76`](https://github.com/npm/installed-package-contents/commit/8ebdc7624ecaba7385871f487a74c7bc64d4efe2) [#89](https://github.com/npm/installed-package-contents/pull/89) `npm-bundled@4.0.0`
+### Chores
+* [`b4dd93c`](https://github.com/npm/installed-package-contents/commit/b4dd93ccd04dfda3a56a1b7fe7a8da4dfedc7dee) [#89](https://github.com/npm/installed-package-contents/pull/89) run template-oss-apply (@reggi)
+* [`8c4baa0`](https://github.com/npm/installed-package-contents/commit/8c4baa02e2c0a20503887adc75783aa15505a757) [#86](https://github.com/npm/installed-package-contents/pull/86) bump @npmcli/eslint-config from 4.0.5 to 5.0.0 (@dependabot[bot])
+* [`09751b7`](https://github.com/npm/installed-package-contents/commit/09751b75f0b7ab9b320da1b60e44239b31474b13) [#74](https://github.com/npm/installed-package-contents/pull/74) bump @npmcli/template-oss to 4.22.0 (@lukekarrys)
+* [`da8cd83`](https://github.com/npm/installed-package-contents/commit/da8cd8398d838f50d2b8fbc91976ce35203b1cf4) [#87](https://github.com/npm/installed-package-contents/pull/87) postinstall for dependabot template-oss PR (@hashtagchris)
+* [`698f46b`](https://github.com/npm/installed-package-contents/commit/698f46b47d7ccb8f6704c3011b6c01e3c7084b1e) [#87](https://github.com/npm/installed-package-contents/pull/87) bump @npmcli/template-oss from 4.23.1 to 4.23.3 (@dependabot[bot])
+
 ## [2.1.0](https://github.com/npm/installed-package-contents/compare/v2.0.2...v2.1.0) (2024-04-23)
 
 ### Features
