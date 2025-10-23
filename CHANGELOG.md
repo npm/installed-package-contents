@@ -1,5 +1,18 @@
 # Changelog
 
+## [4.0.0](https://github.com/npm/installed-package-contents/compare/v3.0.0...v4.0.0) (2025-10-23)
+### ⚠️ BREAKING CHANGES
+* `@npmcli/installed-package-contents` now supports node `^20.17.0 || >=22.9.0`
+### Bug Fixes
+* [`5fc091d`](https://github.com/npm/installed-package-contents/commit/5fc091d8bdc32efc6bc909037aef22b1edf57532) [#101](https://github.com/npm/installed-package-contents/pull/101) align to npm 11 node engine range (@owlstronaut)
+### Dependencies
+* [`93a5316`](https://github.com/npm/installed-package-contents/commit/93a53167f2f90cc0336974708407f0ef2d5ca82a) [#101](https://github.com/npm/installed-package-contents/pull/101) `npm-normalize-package-bin@5.0.0`
+* [`db873b6`](https://github.com/npm/installed-package-contents/commit/db873b6db12ff7f16499fd1c2950315b421792f7) [#101](https://github.com/npm/installed-package-contents/pull/101) `npm-bundled@5.0.0`
+### Chores
+* [`fe53276`](https://github.com/npm/installed-package-contents/commit/fe532764e3f73a4fbcc60d46b5c764f78b4c2d18) [#101](https://github.com/npm/installed-package-contents/pull/101) template-oss-apply (@owlstronaut)
+* [`8dc53d8`](https://github.com/npm/installed-package-contents/commit/8dc53d8b383b5aac60efb5180f82d2bb10ebf952) [#93](https://github.com/npm/installed-package-contents/pull/93) postinstall workflow updates (#93) (@owlstronaut)
+* [`5b2a8e5`](https://github.com/npm/installed-package-contents/commit/5b2a8e5f28e554cdba846c58b88cf0e28b737684) [#98](https://github.com/npm/installed-package-contents/pull/98) bump @npmcli/template-oss from 4.26.0 to 4.27.1 (#98) (@dependabot[bot], @npm-cli-bot)
+
 ## [3.0.0](https://github.com/npm/installed-package-contents/compare/v2.1.0...v3.0.0) (2024-09-25)
 ### ⚠️ BREAKING CHANGES
 * `@npmcli/installed-package-contents` now supports node `^18.17.0 || >=20.5.0`
