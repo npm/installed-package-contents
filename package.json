@@ -1,6 +1,6 @@
 {
   "name": "@npmcli/installed-package-contents",
-  "version": "3.0.0",
+  "version": "4.0.0",
   "description": "Get the list of files installed in a package in node_modules, including bundled dependencies",
   "author": "GitHub Inc.",
   "main": "lib/index.js",
