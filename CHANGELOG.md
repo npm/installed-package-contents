@@ -1,5 +1,21 @@
 # Changelog
 
+## [5.0.0](https://github.com/npm/installed-package-contents/compare/v4.0.0...v5.0.0) (2026-05-18)
+### ⚠️ BREAKING CHANGES
+* `@npmcli/installed-package-contents` now supports node `^22.22.2 || ^24.15.0 || >=26.0.0`
+* template-oss-apply
+### Features
+* [`296659e`](https://github.com/npm/installed-package-contents/commit/296659e32d0fa599d87f7c38ff065ffc2d708c53) [#112](https://github.com/npm/installed-package-contents/pull/112) bump to new node engine range (@owlstronaut)
+* [`57572e8`](https://github.com/npm/installed-package-contents/commit/57572e80294c9234303cb0bb840713f8de2de51f) [#112](https://github.com/npm/installed-package-contents/pull/112) template-oss-apply (@owlstronaut)
+### Dependencies
+* [`93a1cc5`](https://github.com/npm/installed-package-contents/commit/93a1cc5c4d4a4aa7194503ea3532a244e0a62462) [#112](https://github.com/npm/installed-package-contents/pull/112) `npm-normalize-package-bin@6.0.0`
+* [`c11c6ce`](https://github.com/npm/installed-package-contents/commit/c11c6ceb17452b3da67267e456e8c1bbf31e0c60) [#112](https://github.com/npm/installed-package-contents/pull/112) `npm-bundled@6.0.0`
+### Chores
+* [`730ab23`](https://github.com/npm/installed-package-contents/commit/730ab23e469da628c8cf98c0d5897954c20c0279) [#112](https://github.com/npm/installed-package-contents/pull/112) template-oss-apply (@owlstronaut)
+* [`fc84561`](https://github.com/npm/installed-package-contents/commit/fc845618e5e955febb359a9dbc73f317db70af63) [#112](https://github.com/npm/installed-package-contents/pull/112) bumping @npmcli/template-oss from 4.30.0 to 5.1.0 (@owlstronaut)
+* [`457a1e3`](https://github.com/npm/installed-package-contents/commit/457a1e3e1b08c5762ca20cea960e417a2f386dd8) [#103](https://github.com/npm/installed-package-contents/pull/103) bump @npmcli/eslint-config from 5.1.0 to 6.0.0 (#103) (@dependabot[bot])
+* [`6cad4ea`](https://github.com/npm/installed-package-contents/commit/6cad4ea1436200a2919a47830bbada796d631a2e) [#108](https://github.com/npm/installed-package-contents/pull/108) bump @npmcli/template-oss from 4.29.0 to 4.30.0 (#108) (@dependabot[bot], @npm-cli-bot)
+
 ## [4.0.0](https://github.com/npm/installed-package-contents/compare/v3.0.0...v4.0.0) (2025-10-23)
 ### ⚠️ BREAKING CHANGES
 * `@npmcli/installed-package-contents` now supports node `^20.17.0 || >=22.9.0`
